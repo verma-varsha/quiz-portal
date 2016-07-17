@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <title>Login Here</title>
+        <link type="text/css" rel="stylesheet" href="{% static "css/stylesheetlogin.css" %}" />
+    </head>
+
+    <body>
+    <div id="background">
+    <img src="{% static "images/Ques.jpg" %}" class="stretch" />
+    </div>
+    <div id="cent">
+        <h1>Login to Quiz Portal</h1>
+
+        <form id="login_form" method="post" action="/quizportal_app/login/">
+            {% csrf_token %}
+            Username: <input type="text" name="username" value="" size="50" />
+            <br />
+            <br>
+            Password:  <input type="password" name="password" value="" size="50" />
+            <br />
+
+            <input type="submit" value="submit" />
+        </form>
+    <div>
+    </body>
+</html>
