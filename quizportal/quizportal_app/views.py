@@ -74,7 +74,8 @@ def register(request):
 
 
 
-
+def newpage(request):
+    return render(request, 'quizportal_app/newpage.html', {})
 
 
 

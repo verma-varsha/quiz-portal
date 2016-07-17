@@ -38,6 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quizportal_app',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -64,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -74,6 +84,16 @@ WSGI_APPLICATION = 'quizportal.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
+AUTHENTICATION_BACKENDS = (
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+)
 
 DATABASES = {
     'default': {
@@ -124,3 +144,16 @@ STATIC_PATH = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
+
+LOGIN_REDIRECT_URL = '/quizportal_app/newpage/'
+
+SITE_ID = 1
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY='35974804730-uq0egsf4k88i5t83c6dtm1afcs643mrn.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='y3lsuizmgcy3N0Y1Deqmto7F'
+
+SOCIAL_AUTH_FACEBOOK_KEY='1739198336369728'
+SCIAL_AUTH_FACEBOOK_SECRET='17bafc8bedc93a8fedfd198bd7fcde2f'
+
+SOCIAL_AUTH_TWITTER_KEY='17gWe0mz2X7JetyHpIxS6uZ14'
+SCIAL_AUTH_TWITTER_SECRET='oILeI7QiQseQRKeaRaQcwfweAjJzCL0LZq2IQPuOawgDuwoCcO'
