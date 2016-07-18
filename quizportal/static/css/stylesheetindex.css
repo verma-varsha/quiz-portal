@@ -14,9 +14,11 @@ width: 100%;
 margin:auto;
 margin-top:10em;
 background-color: black;
-height:12em;
+height:25em;
 width:31em;
-border-radius: 3px;}
+border-radius: 3px;
+color:white;
+font-size:1em;}
 
 h1{
 background-color: #FF9900;
@@ -47,3 +49,64 @@ a{
 	text-align:center;
 	
 	}
+
+	.fb1{
+
+padding: 0.5em;
+margin-top: 1em;
+}
+.fb{
+
+font-family:Verdana;
+color:white;
+vertical-align:middle;
+text-decoration: none;
+font-weight:bold;
+background-color:#3300CC;
+padding: 0.5em;
+border-radius:5px;
+}
+
+.twi1{
+
+padding: 0.5em;
+margin-top: 1em;
+
+}
+.twi{
+
+font-family:Tahoma;
+color:white;
+vertical-align:middle;
+text-decoration: none;
+font-weight:bold;
+background-color:#00CCFF;
+padding: 0.5em;
+border-radius:5px;
+
+}
+.gm1{
+
+padding: 0.5em;
+margin-top: 1em;
+
+}
+.gm{
+
+font-family:Arial;
+color:white;
+vertical-align:middle;
+text-decoration: none;
+font-weight:bold;
+background-color:#FF3333;
+padding: 0.5em;
+border-radius:5px;
+
+
+.social{
+
+font-family:Arial;
+color:white;
+padding: 0.5em;
+
+}
