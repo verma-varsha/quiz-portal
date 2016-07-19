@@ -145,7 +145,7 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-LOGIN_REDIRECT_URL = '/quizportal_app/newpage/'
+LOGIN_REDIRECT_URL = '/newpage/'
 
 SITE_ID = 1
 

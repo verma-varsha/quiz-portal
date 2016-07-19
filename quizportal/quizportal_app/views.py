@@ -134,7 +134,7 @@ def user_logout(request):
     logout(request)
 
     # Take the user back to the homepage.
-    return HttpResponseRedirect('/quizportal_app/')        
+    return render(request, 'quizportal_app/index.html', {})  
 
 
 
