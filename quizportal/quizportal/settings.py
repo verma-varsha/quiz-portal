@@ -145,7 +145,7 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-LOGIN_REDIRECT_URL = '/newpage/'
+LOGIN_REDIRECT_URL = '/dashboard/'
 
 SITE_ID = 1
 

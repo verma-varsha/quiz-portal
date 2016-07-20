@@ -9,7 +9,7 @@ from quizportal_app.forms import UserForm
 
 
 def index(request):
-    return render(request, 'quizportal_app/index.html',{})
+    return render(request, 'quizportal_app/cover.html',{})
 
 
 
@@ -74,8 +74,10 @@ def register(request):
 
 
 
-def newpage(request):
-    return render(request, 'quizportal_app/newpage.html', {})
+def dashboard(request):
+    u= User.objects.get(username = request.user)
+
+    return render(request, 'quizportal_app/dashboard.html', {'user': u})
 
 
 
@@ -107,7 +109,7 @@ def user_login(request):
                 # If the account is valid and active, we can log the user in.
                 # We'll send the user back to the homepage.
                 login(request, user)
-                return render(request, 'quizportal_app/newpage.html', {})
+                return render(request, 'quizportal_app/dashboard.html', {})
             else:
                 # An inactive account was used - no logging in!
                 return HttpResponse("Your account is disabled.")
@@ -134,7 +136,7 @@ def user_logout(request):
     logout(request)
 
     # Take the user back to the homepage.
-    return render(request, 'quizportal_app/index.html', {})  
+    return render(request, 'quizportal_app/cover.html', {})  
 
 
 

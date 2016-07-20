@@ -23,7 +23,7 @@ class UserProfile(models.Model):
 class QuestionMC(models.Model):
 	questionMC_id= models.AutoField(primary_key= True)
 	question_text= models.TextField()
-	questionMC_quiz= models.ForeignKey(Quiz)
+	questionMC_quiz= models.ForeignKey(Quiz, null = True)
 	questionMC_maxMarks= models.IntegerField(default=0, null= False)
 	questionMC_attempted= models.BooleanField(default= False)
 	def __unicode__(self):
@@ -45,6 +45,7 @@ class QuestionSA(models.Model):
 	questionSA_answer= models.TextField()
 	questionSA_maxMarks= models.IntegerField(default=0, null= False)
 	questionSA_attempted= models.BooleanField(default=False)
+	questionSA_quiz= models.ForeignKey(Quiz, null= True)
 	def __unicode__(self):
 		return u'%s' % (self.questionSA_id)
 
